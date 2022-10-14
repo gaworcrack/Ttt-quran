@@ -26,6 +26,7 @@ export const HeaderFixed = styled.nav`
         display: inline-flex;
         padding: 8px 12px;
         font-weight: 600;
+        color: #333;
         text-transform: uppercase;
         align-items: center;
         border: 0;

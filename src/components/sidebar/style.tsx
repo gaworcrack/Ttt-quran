@@ -46,6 +46,12 @@ export const AppName = styled.h1`
         margin-top: -4px;
         margin-right: 16px;
     }
+    a {
+        display: inline-flex;
+        color: #333;
+        text-decoration: none;
+        align-items: center;
+    }
 `;
 
 export const AppClose = styled.span`
@@ -57,6 +63,7 @@ export const AppClose = styled.span`
     button {
         display: inline-flex;
         padding: 8px 0;
+        color: #333;
         align-items: center;
         border: 0;
         outline: 0;

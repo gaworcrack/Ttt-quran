@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { closeSidebar } from '../../store/reducers/layout';
@@ -66,8 +67,12 @@ export default function UI_Sidebar( props: UI_Sidebar_Props ) {
         <Wrapper id="app--sidebar" className={ isSidebarOpen ? '-is-open' : '' }>
             <AppInfo>
                 <AppName>
-                    <img loading="lazy" src={ Logo } alt="Digital Quran" />
-                    <span className={ isLoading ? 'placeholder' : '' }>Digital Quran</span>
+                    <Link to="/">
+                        <img loading="lazy" src={ Logo } alt="Digital Quran" />
+                        <span className={ isLoading ? 'placeholder' : '' }>
+                            Digital Quran
+                        </span>
+                    </Link>
                 </AppName>
                 <AppClose>
                     <button type="button" onClick={ () => dispatch( closeSidebar() ) }>
