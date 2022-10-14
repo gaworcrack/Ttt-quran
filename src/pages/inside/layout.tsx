@@ -61,11 +61,11 @@ export default function UI_InsidePage() {
             setIsLoading( true );
 
             const _getSurahArab = async () => {
-                return axios.get( `http://api.alquran.cloud/v1/surah/${surahId}` );
+                return axios.get( `https://api.alquran.cloud/v1/surah/${surahId}` );
             };
 
             const _getSurahIndonesia = async () => {
-                return axios.get( `http://api.alquran.cloud/v1/surah/${surahId}/id.indonesian` );
+                return axios.get( `https://api.alquran.cloud/v1/surah/${surahId}/id.indonesian` );
             };
 
             Promise.all( [ _getSurahArab(), _getSurahIndonesia() ] ).then( ( results ) => {
@@ -94,7 +94,7 @@ export default function UI_InsidePage() {
 
             <MainContent>
                 <Source>
-                    API Source: <a href="http://api.alquran.cloud">http://api.alquran.cloud</a>. Fork me on <a href="https://github.com/fachririyanto/digital-quran">Github</a>.
+                    API Source: <a href="https://api.alquran.cloud">https://api.alquran.cloud</a>. Fork me on <a href="https://github.com/fachririyanto/digital-quran">Github</a>.
                 </Source>
 
                 <BlockHeader>

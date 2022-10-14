@@ -48,7 +48,7 @@ export default function UI_Sidebar( props: UI_Sidebar_Props ) {
             setIsLoading( false );
         } else {
             // load from API
-            axios.get( 'http://api.alquran.cloud/v1/surah' ).then( ( res ) => {
+            axios.get( 'https://api.alquran.cloud/v1/surah' ).then( ( res ) => {
                 if ( res.data.code === 200 ) {
                     localStorage.setItem( 'react_quran_items', JSON.stringify( res.data.data ) );
 
