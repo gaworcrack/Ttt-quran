@@ -1,11 +1,11 @@
-import { Ayah } from './Ayah';
+import type { TypeAyah } from './Ayah';
 
-export interface Surah {
+export type TypeSurah = {
     englishName: string,
     englishNameTranslation: string,
     name: string,
     number: number,
     numberOfAyahs: number,
     revelationType: string,
-    ayahs?: [ Ayah ]
+    ayahs?: [TypeAyah]
 }

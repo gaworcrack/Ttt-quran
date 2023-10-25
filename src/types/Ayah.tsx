@@ -1,4 +1,4 @@
-export interface Ayah {
+export type TypeAyah = {
     number: number,
     numberInSurah: number,
     page: number,
