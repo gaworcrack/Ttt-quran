@@ -1,11 +1,13 @@
-import type { TypeAyah } from './Ayah';
+import type { TypeAyah } from './Ayah'
 
 export type TypeSurah = {
-    englishName: string,
-    englishNameTranslation: string,
-    name: string,
-    number: number,
-    numberOfAyahs: number,
-    revelationType: string,
-    ayahs?: [TypeAyah]
+    nomor: number,
+    nama: string,
+    namaLatin: string,
+    jumlahAyat: number,
+    tempatTurun: string,
+    arti: string,
+    deskripsi: string,
+    audioFull: [string],
+    ayat?: TypeAyah[],
 }

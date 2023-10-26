@@ -10,9 +10,7 @@ import type { TypeSurah } from '../../types/Surah'
 import { ListSurah } from './ListSurah'
 import { Skeleton } from './Skeleton'
 
-const initialSurahs: TypeSurah[] = JSON.parse(
-    localStorage.getItem('digital_quran_surahs') || '[]'
-)
+const initialSurahs: TypeSurah[] = JSON.parse(localStorage.getItem('digital_quran_surah') || '[]')
 
 interface Props {
     surah: string
@@ -30,10 +28,10 @@ export function Surahs({ surah }: Props) {
             return
         }
 
-        axios.get(`${APIUrl}/surah`)
+        axios.get(`${APIUrl}/surat`)
             .then(({ data }) => {
                 if ( data.code === 200 ) {
-                    localStorage.setItem('digital_quran_surahs', JSON.stringify(data.data))
+                    localStorage.setItem('digital_quran_surah', JSON.stringify(data.data))
                     setSurahs(data.data)
                 }
 

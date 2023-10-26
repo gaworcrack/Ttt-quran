@@ -1,5 +1,5 @@
 const appName = 'Digital Quran'
-const APIUrl = 'https://api.alquran.cloud/v1'
+const APIUrl = 'https://equran.id/api/v2'
 
 export {
     appName,

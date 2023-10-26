@@ -10,6 +10,9 @@ export default {
         'dq-black': '#333',
         'dq-border': 'rgba(0,0,0,.05)',
       },
+      fontFamily: {
+        'lpmq': ['LPMQ'],
+      },
     },
   },
   plugins: [],

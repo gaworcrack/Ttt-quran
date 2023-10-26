@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LPMQ';
+    src: url('lpmq.otf') format('otf'),
+        url('lpmq.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
