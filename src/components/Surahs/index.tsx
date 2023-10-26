@@ -3,18 +3,12 @@ import {
     useEffect,
 } from 'react'
 
-import {
-    Link,
-    useParams
-} from 'react-router-dom'
-
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
-
-import {
-    APIUrl
-} from '../../config'
-
+import { APIUrl } from '../../config'
 import type { TypeSurah } from '../../types/Surah'
+import { ListSurah } from './ListSurah'
+import { Skeleton } from './Skeleton'
 
 const initialSurahs: TypeSurah[] = JSON.parse(
     localStorage.getItem('digital_quran_surahs') || '[]'
@@ -47,24 +41,5 @@ export function Surahs({ surah }: Props) {
             })
     }, [])
 
-    return isLoading ? null : (
-        <ul>
-            {
-                surahs
-                    .filter((item) => item.englishName.toLowerCase().includes(surah.toLowerCase()))
-                    .map((item) => (
-                        <li key={ item.number }>
-                            <Link
-                                to={ `/surah/${item.number}` }
-                                className={ "block px-6 transition-colors hover:bg-[#f7f7f7]" + ((item.number === parseInt(surahId || '1')) ? ' !bg-[rgb(255,249,213)]' : '') }>
-                                    <span className="block py-3 border-b border-dq-border">
-                                        <span className="mr-1">{ item.number }.</span>
-                                        { item.englishName }
-                                    </span>
-                            </Link>
-                        </li>
-                    ))
-            }
-        </ul>
-    )
+    return isLoading ? <Skeleton /> : <ListSurah items={ surahs } surah={ surah } surahId={ surahId } />
 }
