@@ -27,7 +27,7 @@ export function Surah() {
     }, [surahId])
 
     return (
-        <div className="py-6 px-10">
+        <div className="py-6 px-4 md:px-8 lg:px-10">
             <Helmet>
                 {
                     isLoading ?
