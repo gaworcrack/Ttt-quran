@@ -37,8 +37,7 @@ export function Surah() {
             </Helmet>
 
             <p className="mb-8 p-4 bg-[rgb(255,249,213)] rounded-lg">
-                Tofik: <a/>" className="underline font-semibold">https://tofikkk.com/</a>" className="underline font-semibold">Test</a>.
-            </p>
+                Tofik:<p>
 
             { isLoading ? <Skeleton /> : (
                 <>
