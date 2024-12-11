@@ -37,7 +37,7 @@ export function Surah() {
             </Helmet>
 
             <p className="mb-8 p-4 bg-[rgb(255,249,213)] rounded-lg">
-                Tofik: <a href="https://equran.id/" className="underline font-semibold">https://equran.id/</a>. Ikuti Kami<a href="https://github.com/" className="underline font-semibold">Github</a>.
+                Tofik: <a href="https://equran.id/" className="underline font-semibold">https://tofikkk.com/</a>" className="underline font-semibold">Github</a>.
             </p>
 
             { isLoading ? <Skeleton /> : (
